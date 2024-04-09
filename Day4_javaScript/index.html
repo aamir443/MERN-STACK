@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS first Page</title>
+</head>
+<body>
+    <p id="info"></p>
+    <button onmouseover="openURL();">Open URL</button>
+    <button id="alert">Open alert</button>
+    <button id="msg">Open Msg</button>
+    <script>
+        function openURL(){
+
+            // window.open("https://www.google.com");
+            //  document.location="https://www.google.com";
+             document.getElementById("info").innerHTML=navigator.appVersion
+            //  document.getElementById("info").innerHTML="<h1>hello</h1>"
+        }
+            const alertButton=document.querySelector("#alert");
+            alertButton.onclick=()=>{
+                window.alert("Welcome to JS");
+            }
+        //     msgButtonadd.EventListener"click",()=>{
+        //     alert("this is msg");
+        // }
+    </script>
+</body>
+</html>

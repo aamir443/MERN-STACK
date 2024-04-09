@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JavaScript Calculator</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <style>
+      .button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+      }
+      #result {
+        width: 218px;
+        margin: 5px;
+        text-align: right;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h1 class="container text-center">Calculator</h1> 
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="cal btn btn-success p-lg-5">
+        <div class="d-block">
+          <input type="text" id="result" readonly /> <br />
+          <button class="button" onclick="appendValue('1')">1</button>
+          <button class="button" onclick="appendValue('2')">2</button>
+          <button class="button" onclick="appendValue('3')">3</button>
+          <button class="button" onclick="calculate()">=</button>
+        </div>
+        <div>
+          <button class="button" onclick="appendValue('4')">4</button>
+          <button class="button" onclick="appendValue('5')">5</button>
+          <button class="button" onclick="appendValue('6')">6</button>
+          <button class="button" onclick="appendValue('+')">+</button>
+        </div>
+        <div>
+          <button class="button" onclick="appendValue('7')">7</button>
+          <button class="button" onclick="appendValue('8')">8</button>
+          <button class="button" onclick="appendValue('9')">9</button>
+          <button class="button" onclick="appendValue('-')">-</button>
+        </div>
+        <div>
+          <button class="button btn btn-danger" onclick="clearResult()">
+            C
+          </button>
+          <button class="button" onclick="appendValue('0')">0</button>
+          <button class="button" onclick="appendValue('*')">*</button>
+          <button class="button" onclick="appendValue('/')">/</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let resultField = document.getElementById("result");
+
+      function appendValue(value) {
+        resultField.value += value;
+      }
+
+      function calculate() {
+        resultField.value = eval(resultField.value);
+      }
+
+      function clearResult() {
+        resultField.value = "";
+      }
+    </script>
+  </body>
+</html>

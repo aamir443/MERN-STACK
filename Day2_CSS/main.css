@@ -1,0 +1,25 @@
+h2{
+    color: blue;
+}
+body{
+    background-color: #ab47bc;
+}
+#heading{
+    color: white;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-decoration: underline overline;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    text-transform: uppercase;
+    background-color: grey;
+}
+#para1{
+    margin: 20px;
+    text-align: justify;
+    color: white;
+}
